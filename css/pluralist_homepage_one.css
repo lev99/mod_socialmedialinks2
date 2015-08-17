@@ -1,0 +1,484 @@
+#navlist_stor a {
+display:inline-block;
+outline:0;
+}
+
+#navlist_stor div {
+margin-left:auto;
+margin-right:auto;
+width:100%;
+}
+
+.sprait_social {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+}
+
+.livejournal {
+width:32px;
+height:32px;
+background-position:-10px -10px;
+}
+
+.livejournal:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -94px;
+}
+
+.linkedin {
+width:32px;
+height:32px;
+background-position:-10px -1186px;
+}
+
+.linkedin:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -52px;
+}
+
+.mixx {
+width:32px;
+height:32px;
+background-position:-10px -136px;
+}
+
+.mixx:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -1522px;
+}
+
+.myspace {
+width:32px;
+height:32px;
+background-position:-10px -178px;
+}
+
+.myspace:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -1480px;
+}
+
+.magnolia {
+width:32px;
+height:32px;
+background-position:-10px -220px;
+}
+
+.magnolia:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -1564px;
+}
+
+.netvibes {
+width:32px;
+height:32px;
+background-position:-10px -304px;
+}
+
+.netvibes:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -262px;
+}
+
+.picasa {
+width:32px;
+height:32px;
+background-position:-10px -430px;
+}
+
+.picasa:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -346px;
+}
+
+.newsvine {
+width:32px;
+height:32px;
+background-position:-10px -388px;
+}
+
+.newsvine:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -1438px;
+}
+
+.reddit {
+width:32px;
+height:32px;
+background-position:-10px -514px;
+}
+
+.reddit:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -472px;
+}
+
+.pownce {
+width:32px;
+height:32px;
+background-position:-10px -556px;
+}
+
+.pownce:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -934px;
+}
+
+.yahoo {
+width:32px;
+height:32px;
+background-position:-10px -1228px;
+}
+
+.yahoo:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -598px;
+}
+
+.wordpress {
+width:32px;
+height:32px;
+background-position:-10px -1690px;
+}
+
+.wordpress:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -640px;
+}
+
+.yelp {
+width:32px;
+height:32px;
+background-position:-10px -682px;
+}
+
+.yelp:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -1270px;
+}
+
+.youtube {
+width:32px;
+height:32px;
+background-position:-10px -724px;
+}
+
+.youtube:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -766px;
+}
+
+.webshots {
+width:32px;
+height:32px;
+background-position:-10px -850px;
+}
+
+.webshots:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -808px;
+}
+
+.vkontakte {
+width:32px;
+height:32px;
+background-position:-10px -2152px;
+}
+
+.vkontakte:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -892px;
+}
+
+.google {
+width:32px;
+height:32px;
+background-position:-10px -1858px;
+}
+
+.google:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -976px;
+}
+
+.lastfm {
+width:32px;
+height:32px;
+background-position:-10px -1144px;
+}
+
+.lastfm:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -1396px;
+}
+
+.vimeo {
+width:32px;
+height:32px;
+background-position:-10px -1312px;
+}
+
+.vimeo:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -1732px;
+}
+
+.twitter {
+width:32px;
+height:32px;
+background-position:-10px -1774px;
+}
+
+.twitter:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -2194px;
+}
+
+.furl {
+width:32px;
+height:32px;
+background-position:-10px -1018px;
+}
+
+.furl:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -1900px;
+}
+
+.friendfeed {
+width:32px;
+height:32px;
+background-position:-10px -1942px;
+}
+
+.friendfeed:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -1060px;
+}
+
+.flickr {
+width:32px;
+height:32px;
+background-position:-10px -2404px;
+}
+
+.flickr:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -1984px;
+}
+
+.facebook {
+width:32px;
+height:32px;
+background-position:-10px -2026px;
+}
+
+.facebook:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -1648px;
+}
+
+.digg {
+width:32px;
+height:32px;
+background-position:-10px -1606px;
+}
+
+.digg:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -2110px;
+}
+
+.technorati {
+width:32px;
+height:32px;
+background-position:-10px -1354px;
+}
+
+.technorati:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -2236px;
+}
+
+.stumbleupon {
+width:32px;
+height:32px;
+background-position:-10px -1816px;
+}
+
+.stumbleupon:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -2278px;
+}
+
+.friendster {
+width:32px;
+height:32px;
+background-position:-10px -2320px;
+}
+
+.friendster:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -2362px;
+}
+
+.feed {
+width:32px;
+height:32px;
+background-position:-10px -2446px;
+}
+
+.feed:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -1102px;
+}
+
+.delicious {
+width:32px;
+height:32px;
+background-position:-10px -2068px;
+}
+
+.delicious:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -2488px;
+}
+
+.blogger {
+width:32px;
+height:32px;
+background-position:-10px -2572px;
+}
+
+.blogger:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -2530px;
+}
+
+.odnoklassniki {
+width:32px;
+height:32px;
+background-position:-10px -2656px;
+}
+
+.odnoklassniki:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -2614px;
+}
+
+.mail {
+width:32px;
+height:32px;
+background-position:-10px -2740px;
+}
+
+.mail:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -2698px;
+}
+
+.yandex {
+width:32px;
+height:32px;
+background-position:-10px -2824px;
+}
+
+.yandex:hover {
+background:url(../icons/pluralist_homepage_one.png) top left no-repeat;
+width:32px;
+height:32px;
+background-position:-10px -2782px;
+}
+
+.clr {
+clear:both;
+}
+
+#smilecredits-footer,#smilecredits-footer a {
+color:#ccc!important;
+background-color:inherit;
+font:normal 9px Verdana, Arial, Sans-Serif!important;
+}
+
+#smilecredits-footer {
+display:block;
+height:14px;
+padding-top:1px;
+margin-top:4px;
+text-align:right;
+}
+
+#smilecredits-footer a {
+text-decoration:none!important;
+text-transform:none;
+border:none!important;
+float:right;
+background:none!important;
+margin:0;
+padding:0;
+}
