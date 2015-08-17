@@ -14,5 +14,5 @@ To begin, go to module parameters and select a style icon you want, add the URL-
 <b>S.M.I.L.</b> module designed for [Joomla!](http://www.joomla.org), designed by [Viper Web Solutions](http://www.viperwebsites.com), released under the [GNU General Public License version 2 or later](http://www.gnu.org/licenses/gpl2).<br /><br />
 Copyright &copy; 2008-2010 Viper Web Solutions. All rights reserved.<br />
 Copyright &copy; 2013 Leonidas, made under license from Creative Commons. All rights reserved.<br />
-(Last update: >December 12, 2010 - Version 2.4.1)
+(Last update: December 12, 2010 - Version 2.4.1)
 
