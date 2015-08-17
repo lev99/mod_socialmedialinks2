@@ -1,0 +1,1839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site"
+	method="upgrade"
+>
+<name>Social Media Links 2</name>
+<author>Viper Web Solutions</author>
+<authorEmail>Dallas@viperwebistes.com</authorEmail>
+<authorUrl>www.viperwebsites.com</authorUrl>
+<creationDate>December 12, 2010</creationDate>
+<copyright>Copyright (c) 2008-2010 Viper Web Solutions.</copyright>
+<license>GNU GPL</license>
+<version>2.4.1</version>
+<description>MOD_SOCIALMEDIALINKS2_V1.6</description>
+<files>
+	<filename module="mod_socialmedialinks2">mod_socialmedialinks2.php</filename>
+	<folder>tmpl</folder>
+	<folder>icons</folder>
+	<filename>helper.php</filename>
+	<filename>index.html</filename>
+	<filename>icons/index.html</filename>
+	<filename>icons/pluralist_homepage_one.png</filename>
+	<filename>icons/pluralist_homepage_two.png</filename>
+	<filename>icons/smilebox.jpg</filename>	
+	<filename>js/jquery-2.1.4.js</filename>
+	<filename>js/jquery-2.1.4.min.js</filename>
+	<filename>js/jquery.tipsy.js</filename>
+    <filename>js/tipsy.js</filename>
+    <filename>js/index.html</filename>
+	<filename>tmpl/default.php</filename>
+	<filename>tmpl/index.html</filename>
+	<filename>css/pluralist_homepage_one.css</filename>
+	<filename>css/pluralist_homepage_two.css</filename>
+	<filename>css/tipsy.css</filename>
+	<filename>css/index.html</filename>
+</files>
+	<languages folder="site">
+		<language tag="en-GB">en-GB.mod_socialmedialinks2.ini</language>
+		<language tag="ru-RU">ru-RU.mod_socialmedialinks2.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_SOCIALMEDIALINKS" />
+	<config>
+
+		<fields name="params">
+			<fieldset name="basic">
+				<field type="spacer" name="myspacer00" hr="true" />
+	<field name="off_jquery1" type="radio" class="btn-group btn-yesno" default="0" label="MOD_SOCIALMEDIALINKS2_YOU_DOWNLOAD_JQUERY" description="">
+		<option value="1">JYes</option>
+		<option value="0">JNo</option>
+	</field>
+		<field name="off_tipsy1" type="radio" class="btn-group btn-yesno" default="1" label="MOD_SOCIALMEDIALINKS2_YOU_DOWNLOAD_TIPSY" description="">
+		<option value="0">JYes</option>
+		<option value="1">JNo</option>
+	</field>
+		 		<field 
+					name="nameimgsoc" 
+					type="radio" class="btn-group"
+					default="one" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_NEME_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_NEME_DESC">
+						<option value="one">MOD_SOCIALMEDIALINKS2_FIELD_ICON_NEME_ONE_LABEL</option>
+						<option value="two">MOD_SOCIALMEDIALINKS2_FIELD_ICON_NEME_TWO_LABEL</option>
+				</field>
+		 
+				<field 
+					name="align" 
+					type="radio" class="btn-group"
+					default="center" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_ALIGN_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_ALIGN_DESC">
+						<option value="left">MOD_SOCIALMEDIALINKS2_FIELD_LEFT_LABEL</option>
+						<option value="center">MOD_SOCIALMEDIALINKS2_FIELD_CENTER_LABEL</option>
+						<option value="right">MOD_SOCIALMEDIALINKS2_FIELD_RIGHT_LABEL</option>
+				</field>
+		
+				<field 
+					name="margin" 
+					type="text" 
+					default="3px" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_MARGIN_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_MARGIN_DESC"/>
+			
+				<field 
+					name="text" 
+					type="text" 
+					default="Follow us on" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_TEXT_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_TEXT_DESC"/>
+		
+				<field 
+					name="rsstext" 
+					type="text" 
+					default="RSS Feed" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_RSSTEXT_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_RSSTEXT_DESC"/>
+		
+				<field 
+					name="target" 
+					type="radio" class="btn-group"
+					default="_blank" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_TARGET_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_TARGET_DESC">
+						<option value="_blank">MOD_SOCIALMEDIALINKS2_FIELD_NEW_WINDOW</option>
+						<option value="_self">MOD_SOCIALMEDIALINKS2_FIELD_SAME_WINDOW</option>
+				</field>
+		
+				<field 
+					name="robots" 
+					type="radio" class="btn-group btn-yesno"
+					default="1" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_ROBOTS_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_ROBOTS_DESC">
+						<option value="1">JYes</option>
+						<option value="0">JNo</option>
+				</field>
+		
+				<field 
+					name="credits" 
+					type="radio" class="btn-group btn-yesno"
+					default="1" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_CREDITS_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_CREDITS_DESC">
+						<option value="1">JYes</option>
+						<option value="0">JNo</option>
+				</field>
+		
+				<field name="@spacer" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_ICONS" description="MOD_SOCIALMEDIALINKS2_ICONS" />
+
+				<field 
+					name="ic1" 
+					type="list" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url1" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer1" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field  
+		name="ic2" 
+		type="list" 
+		default="" label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field >
+				<field 
+					name="url2" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer2" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic3" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url3" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer3" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic4" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url4" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer4" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic5" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url5" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer5" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic6" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url6" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer6" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic7" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url7" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer7" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field  
+		name="ic8" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url8" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer8" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic9" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url9" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer9" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic10" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url10" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer10" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic11" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url11" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer11" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic12" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url12" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer12" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic13" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url13" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer13" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic14" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url14" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer14" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic15" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url15" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer15" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic16" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url16" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer16" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic17" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url17" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer17" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic18" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field >
+		<field 
+					name="url18" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer18" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic19" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url19" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer19" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic20" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url20" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC"/>
+					<field name="spacer20" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic21" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url21" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer21" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic22" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url22" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer22" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic23" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url23" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer23" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic24" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url24" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer24" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic25" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url25" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer25" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic26" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url26" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer26" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic27" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url27" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer27" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field  
+		name="ic28" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url28" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer28" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic29" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url29" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer29" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+		
+	<field 
+		name="ic30" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url30" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer30" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+				
+	<field 
+		name="ic31" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url31" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer31" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+				
+					<field 
+		name="ic32" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url32" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer32" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+					
+					<field 
+		name="ic33" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url33" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer33" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+					
+					<field 
+		name="ic34" 
+		type="list" 
+		default="" 
+		label="MOD_SOCIALMEDIALINKS2_FIELD_ICON_LABEL" 
+		description="MOD_SOCIALMEDIALINKS2_FIELD_ICON_DESC">
+		<option value="">default</option>
+		<option value="livejournal">livejournal</option>
+		<option value="linkedin">linkedin</option>
+		<option value="mixx">mixx</option>
+		<option value="myspace">myspace</option>
+		<option value="magnolia">magnolia</option>
+		<option value="netvibes">netvibes</option>
+		<option value="picasa">picasa</option>
+		<option value="newsvine">newsvine</option>
+		<option value="reddit">reddit</option>
+		<option value="pownce">pownce</option>
+		<option value="yahoo">yahoo</option>
+		<option value="wordpress">wordpress</option>
+		<option value="yelp">yelp</option>
+		<option value="youtube">youtube</option>
+		<option value="webshots">webshots</option>
+		<option value="vkontakte">vkontakte</option>
+		<option value="odnoklassniki">odnoklassniki</option>
+		<option value="mail">mail</option>
+		<option value="yandex">yandex</option>
+		<option value="google">google</option>
+		<option value="lastfm">lastfm</option>
+		<option value="vimeo">vimeo</option>
+		<option value="twitter">twitter</option>
+		<option value="furl">furl</option>
+		<option value="friendfeed">friendfeed</option>
+		<option value="flickr">flickr</option>
+		<option value="facebook">facebook</option>
+		<option value="digg">digg</option>
+		<option value="technorati">technorati</option>
+		<option value="stumbleupon">stumbleupon</option>
+		<option value="friendster">friendster</option>
+		<option value="feed">feed</option>
+		<option value="delicious">delicious</option>
+		<option value="blogger">blogger</option>
+	</field>
+		<field 
+					name="url34" 
+					type="text" 
+					default="" 
+					label="MOD_SOCIALMEDIALINKS2_FIELD_URL_LABEL" 
+					description="MOD_SOCIALMEDIALINKS2_FIELD_URL_DESC" />
+					<field name="spacer34" type="spacer" default="" label="MOD_SOCIALMEDIALINKS2_SPACE" description="MOD_SOCIALMEDIALINKS2_SPACE" />
+				
+			</fieldset>
+				<fieldset name="advanced">
+					<field name="layout" type="modulelayout"
+		label="JFIELD_ALT_LAYOUT_LABEL"	description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+					<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
