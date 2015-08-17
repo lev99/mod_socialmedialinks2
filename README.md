@@ -3,7 +3,7 @@
 Social Media Links 2 (option) - v2.0 by leo78
 This module displays the css-sprite style icons that link to your social media profiles.
 
-To begin, go to module parameters and select a style icon you want (link - tipsy, facebook style tooltips for jquery), add the URL-addresses of your social networking profiles. Any icons / URL field left blank will simply not show up. Do not forget to include HTTP: // in all URL-addresses.
+To begin, go to module parameters and select a style icon you want (link - tipsy, facebook style tooltips for jquery), add the URL-addresses of your social networking profiles. Any icons/URL field left blank will simply not show up. Do not forget to include HTTP:// in all URL-addresses.
 
 ## Joomla 3.1.x
 
