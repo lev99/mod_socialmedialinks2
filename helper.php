@@ -25,21 +25,21 @@ defined('_JEXEC') or die;
 $nameimgsoc 			= $params->get('nameimgsoc','one');
  
 $document =& JFactory::getDocument();
-$mod = JURI::base() . 'modules/mod_socialmedialinks2/';
-$document->addStyleSheet(JURI::base() . 'modules/mod_socialmedialinks2/css/pluralist_homepage_'.$nameimgsoc.'.css');
+$mod = JURI::base( true ) . 'modules/mod_socialmedialinks2/';
+$document->addStyleSheet(JURI::base( true ) . 'modules/mod_socialmedialinks2/css/pluralist_homepage_'.$nameimgsoc.'.css');
 
 
 //jQuery
 if ($params->get('off_jquery1')==1) {
 $document =& JFactory::getDocument();
-$document->addScript('modules/mod_socialmedialinks2/js/jquery-2.1.4.js' );
+$document->addScript(JURI::base( true ) . 'modules/mod_socialmedialinks2/js/jquery-2.1.4.js' );
 };
 //tipsy - Facebook-style tooltip plugin for jQuery
 if ($params->get('off_tipsy1')==1) {
 $document =& JFactory::getDocument();
-$document->addScript('modules/mod_socialmedialinks2/js/jquery.tipsy.js' );
-$document->addScript('modules/mod_socialmedialinks2/js/tipsy.js' );
-$document->addStyleSheet('modules/mod_socialmedialinks2/css/tipsy.css' );
+$document->addScript(JURI::base( true ) . 'modules/mod_socialmedialinks2/js/jquery.tipsy.js' );
+$document->addScript(JURI::base( true ) . 'modules/mod_socialmedialinks2/js/tipsy.js' );
+$document->addStyleSheet(JURI::base( true ) . 'modules/mod_socialmedialinks2/css/tipsy.css' );
 };
 
 // Get Basic Module Parameters 
