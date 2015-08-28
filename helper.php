@@ -24,21 +24,21 @@ defined('_JEXEC') or die;
 // Link Site
 $mosConfig_live_site = JURI::base( true ); 
 
-$nameimgsoc 			= $params->get('nameimgsoc','one');
+$nameimgsoc = $params->get('nameimgsoc','one');
  
-$document =& JFactory::getDocument();
+$document = JFactory::getDocument();
 $mod = $mosConfig_live_site . 'modules/mod_socialmedialinks2/';
 $document->addStyleSheet($mosConfig_live_site . 'modules/mod_socialmedialinks2/css/pluralist_homepage_'.$nameimgsoc.'.css');
 
 
 //jQuery
 if ($params->get('off_jquery1')==1) {
-$document =& JFactory::getDocument();
+$document = JFactory::getDocument();
 $document->addScript($mosConfig_live_site . 'modules/mod_socialmedialinks2/js/jquery-2.1.4.js' );
 };
 //tipsy - Facebook-style tooltip plugin for jQuery
 if ($params->get('off_tipsy1')==1) {
-$document =& JFactory::getDocument();
+$document = JFactory::getDocument();
 $document->addScript($mosConfig_live_site . 'modules/mod_socialmedialinks2/js/jquery.tipsy.js' );
 $document->addScript($mosConfig_live_site . 'modules/mod_socialmedialinks2/js/tipsy.js' );
 $document->addStyleSheet($mosConfig_live_site . 'modules/mod_socialmedialinks2/css/tipsy.css' );
