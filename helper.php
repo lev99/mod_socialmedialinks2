@@ -28,20 +28,20 @@ $nameimgsoc = $params->get('nameimgsoc','one');
  
 $document = JFactory::getDocument();
 $mod = $mosConfig_live_site . 'modules/mod_socialmedialinks2/';
-$document->addStyleSheet($mosConfig_live_site . 'modules/mod_socialmedialinks2/css/pluralist_homepage_'.$nameimgsoc.'.css');
+$document->addStyleSheet($mosConfig_live_site . 'modules/mod_socialmedialinks2/css/pluralist_homepage_'.$nameimgsoc.'.css', array('version' => 'auto', 'relative' => 'true'));
 
 
 //jQuery
 if ($params->get('off_jquery1')==1) {
 $document = JFactory::getDocument();
-$document->addScript($mosConfig_live_site . 'modules/mod_socialmedialinks2/js/jquery-2.1.4.js' );
+$document->addScript($mosConfig_live_site . 'modules/mod_socialmedialinks2/js/jquery-2.1.4.js', array('version' => 'auto'), array('defer'=>'defer'));
 };
 //tipsy - Facebook-style tooltip plugin for jQuery
 if ($params->get('off_tipsy1')==1) {
 $document = JFactory::getDocument();
-$document->addScript($mosConfig_live_site . 'modules/mod_socialmedialinks2/js/jquery.tipsy.js' );
-$document->addScript($mosConfig_live_site . 'modules/mod_socialmedialinks2/js/tipsy.js' );
-$document->addStyleSheet($mosConfig_live_site . 'modules/mod_socialmedialinks2/css/tipsy.css' );
+$document->addScript($mosConfig_live_site . 'modules/mod_socialmedialinks2/js/jquery.tipsy.js', array('version' => 'auto'), array('defer'=>'defer'));
+$document->addScript($mosConfig_live_site . 'modules/mod_socialmedialinks2/js/tipsy.js', array('version' => 'auto'), array('defer'=>'defer'));
+$document->addStyleSheet($mosConfig_live_site . 'modules/mod_socialmedialinks2/css/tipsy.css', array('version' => 'auto', 'relative' => 'true'));
 };
 
 // Get Basic Module Parameters 
