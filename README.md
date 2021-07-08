@@ -1,4 +1,4 @@
-# [Module S.M.I.L.](http://foto-s.ru/modul-social-media-icon-links-2.html)
+# [Module S.M.I.L.](http://foto-s.ru/novosti/joomla/modul-social-media-icon-links-2.html)
 
 Social Media Links 2 (option) - v2.0 by leo78
 This module displays the css-sprite style icons that link to your social media profiles.
